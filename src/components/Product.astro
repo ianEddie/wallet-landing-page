@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets'
+import image from '@assets/product-image.webp'
+---
+
+<section class='sm:px-20 px-10 mt-28 sm:flex hidden'>
+  <picture
+    class='bg-[#FDF5DF] w-full flex justify-center items-end rounded-3xl'
+  >
+    <Image
+      src={image}
+      alt='Image about our product'
+      width={image.width}
+      height={image.height}
+    />
+  </picture>
+</section>

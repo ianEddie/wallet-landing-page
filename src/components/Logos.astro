@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets'
+import image from '@assets/logos-image.webp'
+import LineSeparatorIcon from '@icons/line-separator-icon.astro.astro'
+import { LOGOS } from 'src/constants/logos-icons-data.astro'
+---
+
+<section class='flex flex-col items-center sm:gap-y-20 gap-y-10 mt-10'>
+  <LineSeparatorIcon />
+  <article
+    class='w-full flex flex-wrap items-center justify-center sm:gap-x-20 gap-x-10 sm:px-0 px-10'
+  >
+    {LOGOS.map((item) => <item.icon />)}
+  </article>
+  <LineSeparatorIcon />
+</section>

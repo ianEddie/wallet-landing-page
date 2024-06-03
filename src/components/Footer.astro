@@ -1,0 +1,12 @@
+---
+import { FOOTER_DATA } from 'src/constants/footer-data'
+---
+
+<footer
+  class='sm:mx-20 mx-10 mt-28 flex flex-wrap justify-between gap-y-10 items-center py-10 border-t border-stone-600/80 text-neutral-100'
+>
+  <a href='#home' class='font-semibold text-[1.2rem] sm:w-fit w-full'>Wallet</a>
+  <ul class='flex sm:flex-row flex-col gap-10'>
+    {FOOTER_DATA.map((item) => <li class='font-medium'>{item}</li>)}
+  </ul>
+</footer>

@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+import { FEATURES_DATA } from 'src/constants/features-data.astro'
+---
+
+<section
+  class='sm:px-20 px-10 flex sm:flex-row flex-col justify-center mt-28 gap-x-5 sm:gap-y-0 gap-y-20'
+>
+  {
+    FEATURES_DATA.map(({ image, title, text }) => (
+      <article class='flex flex-col items-center sm:px-10 gap-y-6'>
+        <picture>
+          <Image
+            src={image}
+            alt='icon image'
+            width={image.width}
+            height={image.height}
+          />
+        </picture>
+        <h2 class='text-lg text-neutral-100 font-semibold'>{title}</h2>
+        <p class='px-10 text-center text-stone-400/80'>{text}</p>
+      </article>
+    ))
+  }
+</section>

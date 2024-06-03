@@ -1,0 +1,29 @@
+---
+import ButtonSecondary from '@ui/ButtonSecondary.astro'
+import ButtonTertiary from '@ui/ButtonTertiary.astro'
+---
+
+<header
+  class='fixed w-full flex justify-between items-center px-10 sm:py-3 py-4 z-30'
+>
+  <a href='#home' class='text-neutral-100 font-medium'>Wallet</a>
+  <nav class='sm:flex hidden gap-x-5'>
+    <ButtonTertiary>Sign up</ButtonTertiary>
+    <ButtonSecondary>Log in</ButtonSecondary>
+  </nav>
+</header>
+<style>
+  header {
+    animation: scrollx linear both;
+    animation-timeline: scroll(root);
+    animation-range: 5% 10%;
+  }
+  @keyframes scrollx {
+    from {
+      @apply bg-transparent;
+    }
+    to {
+      @apply bg-secondary shadow-lg shadow-stone-900/40;
+    }
+  }
+</style>
